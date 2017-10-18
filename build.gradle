@@ -1,0 +1,45 @@
+buildscript {
+	repositories {
+		jcenter()
+	}
+	dependencies {
+		classpath "org.akhikhl.gretty:gretty:1.2.4"
+	}
+}
+
+repositories {
+    jcenter()
+}
+
+apply plugin: 'java'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+group = 'com.zwahlen'
+
+dependencies {
+	// https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.6'
+
+	// https://mvnrepository.com/artifact/commons-logging/commons-logging
+	compile group: 'commons-logging', name: 'commons-logging', version: '1.2'
+
+	// https://mvnrepository.com/artifact/com.pi4j/pi4j-core
+	compile group: 'com.pi4j', name: 'pi4j-core', version: '1.1'
+
+	// https://mvnrepository.com/artifact/org.springframework/spring-core
+	compile group: 'org.springframework', name: 'spring-core', version: '4.3.11.RELEASE'
+
+	// https://mvnrepository.com/artifact/org.springframework/spring-context
+	compile group: 'org.springframework', name: 'spring-context', version: '4.3.11.RELEASE'
+
+
+
+
+	compile fileTree(dir: 'lib', include: '*.jar')
+    
+
+
+}
+
+
